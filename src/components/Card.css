@@ -3,6 +3,7 @@
   min-width: 300px;
   max-width: 350px;
   position: relative;
+  margin: 10px;
 }
 
 .card::before {
@@ -12,19 +13,15 @@
 }
 
 .card__content {
-  background-color: white;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  margin: 10px;
+  background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
   overflow: hidden;
-  /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 
 .card__image-container {
