@@ -69,32 +69,3 @@
 .card__address {
   color: #737373;
 }
-
-.card__icon-container {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.card__icon-circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 4px;
-}
-
-.card__icon-location {
-  color: #737373;
-}
-
-.card__icon-bed {
-  color: #3b3b3b;
-}
-
-.card__icon-shower {
-  color: #3b3b3b;
-}
