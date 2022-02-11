@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { IoLocationOutline } from "react-icons/io5";
 import Feature from "./Feature";
 import Overlay from "./Overlay";
 
 const Card = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
+
   const cardVariants = {
     rest: {},
     hover: { scale: 1.1 },
@@ -16,15 +22,17 @@ const Card = () => {
     hover: {},
   };
 
-  return (
-    <>
-      <div className="card">
-        <motion.div
-          className="card__content"
-          animate={"rest"}
-          variants={cardVariants}
-          whileHover={"hover"}
-        >
+  const Listing = () => {
+    return (
+      <motion.div
+        className={`card ${open && "open"}`}
+        animate={"rest"}
+        variants={cardVariants}
+        whileHover={"hover"}
+        layout
+        onClick={toggleOpen}
+      >
+        <div className="card__content">
           <div className="card__image-container">
             <motion.img
               className="card__image"
@@ -48,8 +56,17 @@ const Card = () => {
               <Feature iconName={"FaRuler"} iconLabel="100 sq ft." />
             </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
+    );
+  };
+
+  return (
+    <>
+      <Listing />
+      <AnimatePresence>
+        {open && <Overlay onClick={toggleOpen} />}
+      </AnimatePresence>
     </>
   );
 };
