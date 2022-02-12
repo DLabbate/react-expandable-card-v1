@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { IoLocationOutline } from "react-icons/io5";
 import Feature from "./Feature";
 import Overlay from "./Overlay";
+import Modal from "./Modal";
 
 const Card = () => {
   const [open, setOpen] = useState(false);
@@ -65,7 +66,11 @@ const Card = () => {
     <>
       <Listing />
       <AnimatePresence>
-        {open && <Overlay onClick={toggleOpen} />}
+        {open && (
+          <Overlay onClick={toggleOpen}>
+            <Modal />
+          </Overlay>
+        )}
       </AnimatePresence>
     </>
   );

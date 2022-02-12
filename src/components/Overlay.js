@@ -4,17 +4,21 @@ import "./Overlay.css";
 
 const Overlay = ({ children, onClick }) => {
   const variants = {
-    open: { opacity: 0.6 },
-    closed: { opacity: 0 },
+    open: {
+      backgroundColor: "rgba(0,0,0,0.6)",
+      transition: { staggerChildren: 2 },
+    },
+    closed: { backgroundColor: "rgba(0,0,0,0)" },
   };
+
   return (
     <motion.div
       className="overlay"
       onClick={onClick}
       variants={variants}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0.6 }}
-      exit={{ opacity: 0 }}
+      initial={"closed"}
+      animate={"open"}
+      exit={"closed"}
       key="overlay"
     >
       {children}
