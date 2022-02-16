@@ -4,10 +4,7 @@ import "./Overlay.css";
 
 const Overlay = ({ children, onClick }) => {
   const variants = {
-    open: {
-      backgroundColor: "rgba(0,0,0,0.6)",
-      transition: { staggerChildren: 2 },
-    },
+    open: { backgroundColor: "rgba(0,0,0,0.6)" },
     closed: { backgroundColor: "rgba(0,0,0,0)" },
   };
 
