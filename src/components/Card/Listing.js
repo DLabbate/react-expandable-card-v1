@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Listing.css";
 import { motion } from "framer-motion";
 import { IoLocationOutline } from "react-icons/io5";
 import Feature from "./Feature";
 
-const Listing = ({ onClick }) => {
+const Listing = ({ data, onClick }) => {
+  const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace } =
+    data;
+
   return (
     <motion.div
       className="listing"
@@ -16,22 +19,22 @@ const Listing = ({ onClick }) => {
           <motion.img
             className="listing__image"
             alt="real estate mansion"
-            src="https://blog.dupontregistry.com/wp-content/uploads/2020/08/Parkland_1st-Photo-scaled.jpg"
+            src={imageUrl}
           />
         </div>
         <div className="listing__details">
           <div className="listing__type">For Sale</div>
           <div className="listing__row">
-            <span className="listing__price">$1,200,000</span>
+            <span className="listing__price">{price}</span>
           </div>
           <div className="listing__row">
             <IoLocationOutline className="listing__icon-location" />
-            <span className="listing__address">5100 Fake Address</span>
+            <span className="listing__address">{address}</span>
           </div>
           <div className="listing__row">
-            <Feature iconName={"FaBed"} iconLabel="4" />
-            <Feature iconName={"FaShower"} iconLabel="3" />
-            <Feature iconName={"FaRuler"} iconLabel="100 sq ft." />
+            <Feature iconName={"FaBed"} iconLabel={numBedroom} />
+            <Feature iconName={"FaShower"} iconLabel={numWashrooms} />
+            <Feature iconName={"FaRuler"} iconLabel={livingSpace} />
           </div>
         </div>
       </div>
