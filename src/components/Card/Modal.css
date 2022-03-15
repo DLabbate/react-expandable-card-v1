@@ -71,10 +71,6 @@
   .modal__close {
     color: #cacaca;
   }
-
-  .modal__description {
-    overflow: scroll;
-  }
 }
 
 @media only screen and (min-width: 1281px) {
