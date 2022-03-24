@@ -37,13 +37,14 @@
   color: #737373;
 }
 
-.modal__close {
+.modal__close-container {
+  position: absolute;
+  cursor: pointer;
+}
+
+.modal__close-icon {
   width: 40px;
   height: 40px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
 }
 
 @media only screen {
@@ -68,7 +69,14 @@
     align-items: flex-start;
   }
 
-  .modal__close {
+  .modal__close-container {
+    right: -20px;
+    top: -30px;
+  }
+
+  .modal__close-icon {
+    width: 35px;
+    height: 35px;
     color: #cacaca;
   }
 }
@@ -97,7 +105,12 @@
     align-items: flex-start;
   }
 
-  .modal__close {
+  .modal__close-container {
+    right: 10px;
+    top: 10px;
+  }
+
+  .modal__close-icon {
     color: #737373;
   }
 }
