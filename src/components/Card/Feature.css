@@ -18,3 +18,7 @@
 .feature__icon {
   color: #737373;
 }
+
+.feature__label {
+  white-space: nowrap;
+}

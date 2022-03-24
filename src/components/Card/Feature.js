@@ -9,7 +9,7 @@ const Feature = ({ iconName, iconLabel }) => {
       <div className="feature__circle">
         <Icon className="feature__icon" />
       </div>
-      <span>{iconLabel}</span>
+      <span className="feature__label">{iconLabel}</span>
     </div>
   );
 };

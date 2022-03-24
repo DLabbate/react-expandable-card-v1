@@ -13,3 +13,13 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cacaca;
+  border-radius: 5px;
+}

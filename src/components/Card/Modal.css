@@ -23,6 +23,13 @@
   text-align: left;
 }
 
+.modal__description-wrapper {
+  overflow-y: scroll;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .modal__price {
   font-size: 3rem;
 }
@@ -33,8 +40,10 @@
 }
 
 .modal__description {
-  font-size: 1.25rem;
   color: #737373;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.25rem;
 }
 
 .modal__close-container {

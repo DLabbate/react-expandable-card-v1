@@ -64,7 +64,10 @@ const Modal = ({ data }) => {
           <Feature iconName={"FaShower"} iconLabel={numWashrooms} />
           <Feature iconName={"FaRuler"} iconLabel={livingSpace} />
         </motion.div>
-        <motion.div className="modal__row" variants={modalRowVariants}>
+        <motion.div
+          className="modal__row modal__description-wrapper"
+          variants={modalRowVariants}
+        >
           <p className="modal__description">{description}</p>
         </motion.div>
         <motion.div
