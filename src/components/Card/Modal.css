@@ -50,6 +50,7 @@
 }
 
 .modal__close-wrapper {
+  all: unset;
   position: absolute;
   cursor: pointer;
 }

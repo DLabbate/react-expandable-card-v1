@@ -7,17 +7,21 @@ import Listing from "./Listing";
 const Card = ({ data }) => {
   const [open, setOpen] = useState(false);
 
-  const toggleOpen = () => {
-    setOpen(!open);
+  const openModal = () => {
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
   };
 
   return (
     <>
-      <Listing data={data} onClick={toggleOpen} />
+      <Listing data={data} open={openModal} />
       <AnimatePresence>
         {open && (
-          <Overlay onClick={toggleOpen}>
-            <Modal data={data} />
+          <Overlay close={closeModal}>
+            <Modal data={data} close={closeModal} />
           </Overlay>
         )}
       </AnimatePresence>

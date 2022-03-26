@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import "./Overlay.css";
 
-const Overlay = ({ children, onClick }) => {
+const Overlay = ({ children, close }) => {
   const variants = {
     open: { backgroundColor: "rgba(0,0,0,0.6)" },
     closed: { backgroundColor: "rgba(0,0,0,0)" },
@@ -11,7 +11,7 @@ const Overlay = ({ children, onClick }) => {
   return (
     <motion.div
       className="overlay"
-      onClick={onClick}
+      onClick={close}
       variants={variants}
       initial={"closed"}
       animate={"open"}

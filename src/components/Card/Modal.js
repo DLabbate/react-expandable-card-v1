@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Feature from "./Feature";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
-const Modal = ({ data }) => {
+const Modal = ({ data, close }) => {
   const {
     imageUrl,
     price,
@@ -70,12 +70,13 @@ const Modal = ({ data }) => {
         >
           <p className="modal__description">{description}</p>
         </motion.div>
-        <motion.div
+        <motion.button
           className="modal__close-wrapper"
           whileHover={{ scale: 1.2 }}
+          onClick={close}
         >
           <IoCloseCircleOutline className="modal__close-icon" />
-        </motion.div>
+        </motion.button>
       </motion.div>
     </motion.div>
   );
