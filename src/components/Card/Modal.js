@@ -65,13 +65,13 @@ const Modal = ({ data }) => {
           <Feature iconName={"FaRuler"} iconLabel={livingSpace} />
         </motion.div>
         <motion.div
-          className="modal__row modal__description-wrapper"
+          className="modal__description-wrapper"
           variants={modalRowVariants}
         >
           <p className="modal__description">{description}</p>
         </motion.div>
         <motion.div
-          className="modal__close-container"
+          className="modal__close-wrapper"
           whileHover={{ scale: 1.2 }}
         >
           <IoCloseCircleOutline className="modal__close-icon" />
