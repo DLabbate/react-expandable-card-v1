@@ -1,7 +1,6 @@
 # React + Framer Animated Card
 
-<img src="documentation/react-logo.png" width=50/>
-<img src="documentation/framer-logo.png" width=50/>
+<img src="documentation/react-logo.png" width=75/><img src="documentation/framer-logo.png" width=75/>
 
 <br/>
 
