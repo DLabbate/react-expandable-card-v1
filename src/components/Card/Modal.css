@@ -1,0 +1,129 @@
+.modal {
+  min-height: 600px;
+  border-radius: 20px;
+  position: relative;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+}
+
+.modal__image {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.modal__info {
+  background-color: white;
+  display: flex;
+}
+
+.modal__row {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.modal__description-wrapper {
+  margin: 20px 0px;
+  text-align: left;
+  overflow-y: scroll;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.modal__price {
+  font-size: 3rem;
+}
+
+.modal__address {
+  font-size: 1.5rem;
+  color: #737373;
+}
+
+.modal__description {
+  color: #737373;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.25rem;
+}
+
+.modal__close-wrapper {
+  all: unset;
+  position: absolute;
+  cursor: pointer;
+}
+
+.modal__close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen {
+  .modal {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .modal__image {
+    width: 100%;
+  }
+
+  .modal__info {
+    width: calc(100%);
+    height: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal__close-wrapper {
+    right: -20px;
+    top: -30px;
+  }
+
+  .modal__close-icon {
+    width: 35px;
+    height: 35px;
+    color: #cacaca;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .modal {
+    width: 80%;
+    height: 80%;
+    max-width: 1800px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  .modal__image {
+    width: calc(70% - 10px);
+    height: 100%;
+  }
+
+  .modal__info {
+    width: calc(30% - 10px);
+    height: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal__close-wrapper {
+    right: 10px;
+    top: 10px;
+  }
+
+  .modal__close-icon {
+    color: #737373;
+  }
+}
