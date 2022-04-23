@@ -15,13 +15,8 @@ const Modal = ({ data, close }) => {
   } = data;
 
   return (
-    <div
-      className="modal"
-      key="modal__image"
-      onClick={(e) => e.stopPropagation()}
-    >
+    <div className="modal" onClick={(e) => e.stopPropagation()}>
       <img
-        key="modal__image"
         className="modal__image"
         alt="real estate mansion"
         src={imageUrl}
