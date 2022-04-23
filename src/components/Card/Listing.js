@@ -2,12 +2,12 @@ import React from "react";
 import Feature from "./Feature";
 import "./Listing.css";
 
-const Listing = ({ data }) => {
+const Listing = ({ data, open }) => {
   const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace } =
     data;
 
   return (
-    <div className="listing">
+    <div className="listing" onClick={open}>
       <div className="listing__content">
         <div className="listing__image-container">
           <img
