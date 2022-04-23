@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Listing from "./Listing";
 import Overlay from "./Overlay";
+import Modal from "./Modal";
 
 const Card = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ const Card = ({ data }) => {
       <Listing data={data} open={openModal} />
       {open && (
         <Overlay close={closeModal}>
-          {/* Expanded Modal should go in here */}
+          <Modal data={data} close={closeModal} />
         </Overlay>
       )}
     </>
