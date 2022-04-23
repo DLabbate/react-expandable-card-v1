@@ -1,8 +1,8 @@
 import React from "react";
 import "./Modal.css";
-import { motion } from "framer-motion";
 import Feature from "./Feature";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const Modal = ({ data, close }) => {
   const {
@@ -41,12 +41,10 @@ const Modal = ({ data, close }) => {
   return (
     <motion.div
       className="modal"
-      key="modal__image"
       variants={modalVariants}
       onClick={(e) => e.stopPropagation()}
     >
       <motion.img
-        key="modal__image"
         className="modal__image"
         alt="real estate mansion"
         src={imageUrl}

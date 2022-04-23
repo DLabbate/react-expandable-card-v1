@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import Listing from "./Listing";
 import Overlay from "./Overlay";
 import Modal from "./Modal";
-import Listing from "./Listing";
+import { AnimatePresence } from "framer-motion";
 
 const Card = ({ data }) => {
   const [open, setOpen] = useState(false);

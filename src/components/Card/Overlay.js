@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import React from "react";
 import "./Overlay.css";
+import { motion } from "framer-motion";
 
 const Overlay = ({ children, close }) => {
   const variants = {

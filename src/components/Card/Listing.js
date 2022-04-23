@@ -1,18 +1,17 @@
 import React from "react";
+import Feature from "./Feature";
 import "./Listing.css";
 import { motion } from "framer-motion";
-import { IoLocationOutline } from "react-icons/io5";
-import Feature from "./Feature";
 
 const Listing = ({ data, open }) => {
   const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace } =
     data;
 
   return (
-    <motion.div className="listing" whileHover={{ scale: 1.1 }} onClick={open}>
+    <motion.div className="listing" onClick={open} whileHover={{ scale: 1.1 }}>
       <div className="listing__content">
         <div className="listing__image-container">
-          <motion.img
+          <img
             className="listing__image"
             alt="real estate mansion"
             src={imageUrl}
@@ -24,7 +23,6 @@ const Listing = ({ data, open }) => {
             <span className="listing__price">{price}</span>
           </div>
           <div className="listing__row">
-            <IoLocationOutline className="listing__icon-location" />
             <span className="listing__address">{address}</span>
           </div>
           <div className="listing__row">
