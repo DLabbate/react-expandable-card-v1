@@ -1,13 +1,14 @@
 import React from "react";
 import Feature from "./Feature";
 import "./Listing.css";
+import { motion } from "framer-motion";
 
 const Listing = ({ data, open }) => {
   const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace } =
     data;
 
   return (
-    <div className="listing" onClick={open}>
+    <motion.div className="listing" onClick={open} whileHover={{ scale: 1.1 }}>
       <div className="listing__content">
         <div className="listing__image-container">
           <img
@@ -31,7 +32,7 @@ const Listing = ({ data, open }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
