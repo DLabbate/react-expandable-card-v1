@@ -1,4 +1,5 @@
 import React from "react";
+import Feature from "./Feature";
 import "./Listing.css";
 
 const Listing = ({ data }) => {
@@ -22,6 +23,11 @@ const Listing = ({ data }) => {
           </div>
           <div className="listing__row">
             <span className="listing__address">{address}</span>
+          </div>
+          <div className="listing__row">
+            <Feature iconName={"FaBed"} iconLabel={numBedroom} />
+            <Feature iconName={"FaShower"} iconLabel={numWashrooms} />
+            <Feature iconName={"FaRuler"} iconLabel={livingSpace} />
           </div>
         </div>
       </div>

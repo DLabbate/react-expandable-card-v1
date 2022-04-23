@@ -1,0 +1,24 @@
+.feature {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.feature__circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+}
+
+.feature__icon {
+  color: #737373;
+}
+
+.feature__label {
+  white-space: nowrap;
+}
